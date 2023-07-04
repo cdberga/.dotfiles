@@ -1,0 +1,67 @@
+# Checar drives montados
+lsblk
+
+# Gravar imagem no pendrive
+sudo dd if=$HOME/Downloads/Fedora-Workstation-Live-x86_64-30-1.2.iso of=/dev/sdc bs=4M
+
+# Para criar pendrive bootavel de Windows (WoeUSB que não funciona direito no Mint)
+sudo apt install git p7zip-full python3-pip python3-wxgtk4.0
+sudo pip3 install WoeUSB-ng
+
+# Gravador de ISO do Mint
+mintstick -m iso
+
+#Zerar pendrive
+sudo dd if=/dev/zero of=/dev/sdb bs=1M status=progress
+
+# Gerenciar discos
+gnome-disks
+
+# Para ter opção de write no Pendrive escrever no /etc/fstab
+/dev/sdb1 /media/usb auto user,umask=000,utf8,noauto 0 0
+
+# Checar portas utilizadas
+sudo netstat -tlpn
+
+# Change date and time
+timedatectl set-time '2020-04-07 11:20:15
+
+# set automatic date off
+sudo timedatectl set-ntp off
+
+# set screen resolution
+xrandr -s 1600x900
+
+# see screen resolution
+xrandr
+
+# Open configs Ubuntu / Mint on i3wm
+env XDG_CURRENT_DESKTOP=GNOME gnome-control-center
+
+# change git remote to ssh
+git remote set-url origin git@github.com:user/repository.git
+
+# Avoid Ubuntu auto-set microphone volume
+https://askubuntu.com/questions/689209/how-to-disable-microphone-volume-auto-adjustment-in-cisco-webex
+
+# scp to android
+scp -P 2222 "admin@192.168.0.162:SDCard/docs/temp/file.pdf" ./file.pdf
+
+# ssh to android
+ssh -p 2222 admin@192.168.0.162
+
+# Conectar no manjaro via ssh
+[user@virtualbox ~]$ sudo ufw allow from IP_ADDRESS
+Rules updated
+[user@virtualbox ~]$ sudo systemctl start sshd
+... Daí Tentar de novo
+
+# Converter músicas
+ffmpeg -i 'music.m4a' 'music.mp3'
+
+# instalação vbox guest 
+sudo apt install vistualbox-guest-dkms virtualbox-dkms virtualbox-guest-x11
+
+# Resolver lentidão de programas no Xorg
+sudo apt remove xdg-desktop-portal
+sudo apt remove xdg-desktop-portal-gnome

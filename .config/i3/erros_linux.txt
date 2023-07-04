@@ -1,0 +1,54 @@
+* ===== Erro ao inicializar projeto React (npm start) =====
+
+    === Mensagem ===
+events.js:174
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: ENOSPC: System limit for number of file watchers reached, watch '/home/carlosbergamasco/work/samples-react/my-app/public'
+    at FSWatcher.start (internal/fs/watchers.js:165:26)
+    at Object.watch (fs.js:1258:11)
+    at createFsWatchInstance (/home/carlosbergamasco/work/samples-react/my-app/node_modules/chokidar/lib/nodefs-handler.js:38:15)
+    at setFsWatchListener (/home/carlosbergamasco/work/samples-react/my-app/node_modules/chokidar/lib/nodefs-handler.js:81:15)
+    at FSWatcher.NodeFsHandler._watchWithNodeFs (/home/carlosbergamasco/work/samples-react/my-app/node_modules/chokidar/lib/nodefs-handler.js:233:14)
+    at FSWatcher.NodeFsHandler._handleDir (/home/carlosbergamasco/work/samples-react/my-app/node_modules/chokidar/lib/nodefs-handler.js:429:19)
+    at FSWatcher.<anonymous> (/home/carlosbergamasco/work/samples-react/my-app/node_modules/chokidar/lib/nodefs-handler.js:477:19)
+    at FSWatcher.<anonymous> (/home/carlosbergamasco/work/samples-react/my-app/node_modules/chokidar/lib/nodefs-handler.js:482:16)
+    at FSReqWrap.oncomplete (fs.js:154:5)
+Emitted 'error' event at:
+    at FSWatcher._handleError (/home/carlosbergamasco/work/samples-react/my-app/node_modules/chokidar/index.js:260:10)
+    at createFsWatchInstance (/home/carlosbergamasco/work/samples-react/my-app/node_modules/chokidar/lib/nodefs-handler.js:40:5)
+    at setFsWatchListener (/home/carlosbergamasco/work/samples-react/my-app/node_modules/chokidar/lib/nodefs-handler.js:81:15)
+    [... lines matching original stack trace ...]
+    at FSReqWrap.oncomplete (fs.js:154:5)
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! my-app@0.1.0 start: `react-scripts start`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the my-app@0.1.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/carlosbergamasco/.npm/_logs/2020-11-24T21_21_27_607Z-debug.log
+
+    === Solução ===
+
+    Ubuntu
+    sudo gedit /etc/sysctl.conf
+
+    Add a line at the bottom
+    fs.inotify.max_user_watches=524288
+
+    Then save and exit!
+
+    sudo sysctl -p
+    to check it
+
+    Then it is solved!
+
+* ===== Problema com Xorg com lentidão ao iniciar programas =====
+
+    === Solução ===
+sudo apt remove xdg-desktop-portal
+sudo apt remove xdg-desktop-portal-gnome
