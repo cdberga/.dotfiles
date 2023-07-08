@@ -45,10 +45,18 @@ if [ "$packcmd" != "pkg install" ]; then
 fi
 # install mc
 checkInstall "mc"
+# install ripgrep
+checkInstall "ripgrep"
 # install neovim
 checkInstall "neovim"
 # install vimplug
 checkVimplug
 
 # install vim plugins
-vim -c 'PlugInstall'
+nvim -c 'PlugInstall'
+
+# set bash configs and hide untracked files
+source $HOME/.bashrc
+cfg config --local status.showUntrackedFiles no
+
+# Set config to .gitconfig
