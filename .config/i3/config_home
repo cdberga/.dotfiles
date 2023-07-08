@@ -183,7 +183,7 @@ bindsym $mod+o exec "libreoffice"
 # McEdit clip to clipboard
 bindsym $mod+Shift+m exec "find ~/.local/share/mc/mcedit -name mcedit.clip | xclip -i -sel copy ~/.local/share/mc/mcedit/mcedit.clip &"
 # Open general menu
-bindsym $mod+m exec "$HOME/work/scripts/menus.sh -a $HOME/work/scripts/menus.cfg -t 'Menu: '"
+bindsym $mod+m exec "$HOME/work/scripts/menus_new.sh -a $HOME/work/scripts/menus.cfg -t 'Menu: '"
 
 ### End Read for Desktop Image ###
 
