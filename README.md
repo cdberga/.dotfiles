@@ -21,7 +21,7 @@ https://www.atlassian.com/br/git/tutorials/dotfiles
 
 1. Be sure to have git installed on your local machine.
 1. Create the $HOME/.dotfiles directory.
-1. In yout $HOME folder run `git clone --bare <this-repo-url> $HOME/.dotfiles`
+1. In your $HOME folder run `git clone --bare <this-repo-url> $HOME/.dotfiles`
 1. Define the 'cfg' alias in current scope with `alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'`
 1. Run `cfg checkout -f` at $HOME folder to overwrite existing .dotfiles, or without -f option to follow the Atlassian instructions.
 1. Run `./install.sh`script.
