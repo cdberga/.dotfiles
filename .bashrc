@@ -135,7 +135,7 @@ alias updbx="source ~/.bashrc"
 alias drv="lsblk"
 alias tm="tmux"
 
-alias nf="nvim \`fzf\`"
+alias nf="nvim \"\`fzf\`\""
 
 function vboxup() {
     disk=$1

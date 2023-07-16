@@ -146,7 +146,7 @@ bindsym $mod+g exec "google-chrome"
 bindsym $mod+i exec "ij"
 # SQLite
 bindsym $mod+Ctrl+l exec "$HOME/DevEnv/SQLiteStudio/sqlitestudio"
-bindsym $mod+p exec "$HOME/DevEnv/Postman/Postman"
+## bindsym $mod+p exec "$HOME/DevEnv/Postman/Postman"
 bindsym $mod+b exec "firejail brave-browser"
 # Lock Screen
 bindsym $mod+l exec "i3lock"
@@ -180,6 +180,8 @@ bindsym $mod+Shift+u exec "dm-tool switch-to-greeter"
 bindsym $mod+Ctrl+m exec "virtualbox"
 # Libreoffice
 bindsym $mod+o exec "libreoffice"
+# Authy
+bindsym $mod+Ctrl+a exec "authy"
 # McEdit clip to clipboard
 bindsym $mod+Shift+m exec "find ~/.local/share/mc/mcedit -name mcedit.clip | xclip -i -sel copy ~/.local/share/mc/mcedit/mcedit.clip &"
 # Open general menu
