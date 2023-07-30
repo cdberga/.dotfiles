@@ -140,7 +140,7 @@ bindsym $mod+F10 exec "keepass | authy"
 # Calculator (Gnome)
 bindsym $mod+c exec gnome-calculator
 # File Manager
-bindsym $mod+t exec "thunar"
+#bindsym $mod+t exec "thunar"
 bindsym $mod+g exec "google-chrome"
 # IntelliJ
 bindsym $mod+i exec "ij"
@@ -190,7 +190,10 @@ bindsym $mod+m exec "$HOME/work/scripts/menus_new.sh -a $HOME/work/scripts/menus
 bindsym $mod+Ctrl+p exec "$HOME/work/scripts/passmenu.sh -m d"
 # Pass menu site
 bindsym $mod+Shift+p exec "$HOME/work/scripts/passmenu.sh -m d -f site"
-
+# Pass menu pwd
+bindsym $mod+p exec "$HOME/work/scripts/passmenu.sh -m d -f pwd"
+# Totp with dmenu
+bindsym $mod+t exec "$HOME/work/scripts/totp.sh -tm"
 
 ### End Read for Desktop Image ###
 
