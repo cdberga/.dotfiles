@@ -188,6 +188,8 @@ bindsym $mod+Shift+m exec "find ~/.local/share/mc/mcedit -name mcedit.clip | xcl
 bindsym $mod+m exec "$HOME/work/scripts/menus_new.sh -a $HOME/work/scripts/menus.cfg -t 'Menu: '"
 # Pass menu login
 bindsym $mod+Ctrl+p exec "$HOME/work/scripts/passmenu.sh -m d"
+# Pass menu user
+bindsym $mod+u exec "$HOME/work/scripts/passmenu.sh -m d -f user"
 # Pass menu site
 bindsym $mod+Shift+p exec "$HOME/work/scripts/passmenu.sh -m d -f site"
 # Pass menu pwd
