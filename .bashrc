@@ -130,11 +130,18 @@ alias fbash="cat ~/.bashrc | grep"
 alias ebash="nvim $HOME/.bashrc"
 alias fj="firejail --list"
 
+function ph() {
+    docname=$1
+    if [ $docname ]; then
+        pandoc $docname.md -o $docname.html
+    fi
+}
+
 #alias vboxup='vboxmanage modifymedium disk $1 --resize $2'
 alias updbx="source ~/.bashrc"
 alias drv="lsblk"
 alias tm="tmux"
-
+alias nv="nvim"
 alias nf="nvim \"\`fzf\`\""
 
 function vboxup() {
