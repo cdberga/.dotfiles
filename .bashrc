@@ -129,6 +129,7 @@ alias ali="alias | grep $1"
 alias fbash="cat ~/.bashrc | grep"
 alias ebash="nvim $HOME/.bashrc"
 alias fj="firejail --list"
+alias abre='xdg-open `fzf`'
 
 function ph() {
     docname=$1
