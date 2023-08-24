@@ -118,18 +118,17 @@ alias msr="mvn spring-boot:run"
 alias mte="mvn test"
 alias procs="ps -ef"
 alias proc="ps -ef | grep"
-alias addcommit="git add . && git commit -m ${1}"
 alias i3w="cd $HOME/.config/i3"
 alias i3c="nvim $HOME/.config/i3/config_home"
 alias updi3="$HOME/.config/i3/scripts/update_config.sh"
 alias start="npm run start"
 alias tests="npm run test"
 alias rmm="shred -n 2 -z -u -v"
-alias ali="alias | grep $1"
 alias fbash="cat ~/.bashrc | grep"
 alias ebash="nvim $HOME/.bashrc"
 alias fj="firejail --list"
 alias abre='xdg-open `fzf`'
+alias ab='xdg-open `fzf`'
 
 function ph() {
     docname=$1
