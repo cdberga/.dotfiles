@@ -93,6 +93,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias lt='ls -lt'
 alias ..="cd .."
+alias c="cd"
 
 # Commands
 alias open=xdg-open
@@ -127,8 +128,8 @@ alias rmm="shred -n 2 -z -u -v"
 alias fbash="cat ~/.bashrc | grep"
 alias ebash="nvim $HOME/.bashrc"
 alias fj="firejail --list"
-alias abre='xdg-open `fzf`'
-alias ab='xdg-open `fzf`'
+alias abre='xdg-open "`fzf`"'
+alias ab='xdg-open "`fzf`"'
 
 function ph() {
     docname=$1
@@ -193,9 +194,6 @@ alias p3="python3"
 
 # Abre editor mcedit
 alias me="mcedit"
-
-# Copia texto para clipboard
-alias ct="echo \"$*\" | xclip -i -selection"
 
 #Exibe atalhos do i3
 i3a() { cat $HOME/.config/i3/config_home | sed -e 's/bindsym\ //' | sed -e 's/\$mod/Win/' | sed -e 's/exec/→/' | grep $1 ;}
