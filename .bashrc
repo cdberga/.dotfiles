@@ -178,6 +178,8 @@ addsource "~/.bash_aliases"
 addsource "$HOME/.bovbash"
 addsource "$HOME/.scrbash"
 
+alias cronshow="grep CRON /var/log/syslog"
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
