@@ -6,7 +6,7 @@ Plug 'junegunn/fzf.vim'
 call plug#end()
 
 " Show line numbers
-set number
+set relativenumber
 
 " Fzf
 nnoremap <silent> <C-p> :Files<CR>
