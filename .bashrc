@@ -142,7 +142,7 @@ function ph() {
 alias updbx="source ~/.bashrc"
 alias drv="lsblk"
 alias tm="tmux"
-alias nv="nvim"
+alias n="nvim"
 alias nf="nvim \"\`fzf\`\""
 
 function vboxup() {
