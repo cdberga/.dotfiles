@@ -37,11 +37,16 @@ function checkVimplug(){
 # check package manager
 checkPackMan
 # install git
-checkInstall "git"
+checkInstall "git" "curl"
 # install i3 and utilities
-if [ "$packcmd" != "pkg install" ]; then
+i3_install="N"
+echo "Install i3 window manager[y/N]? "
+read i3_install
+if [ "$packcmd" != "pkg install" ] && [[ "$i3_install" =~ [yY] ]]; then
   checkInstall "i3" "i3lock" "i3status" "i3blocks"
   checkInstall "numlockx" "feh" "flameshot" "ffmpeg" "slop"
+else
+  echo "Don't install i3 window manager and utilities."
 fi
 # install mc
 checkInstall "mc"
