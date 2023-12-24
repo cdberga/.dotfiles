@@ -204,7 +204,7 @@ i3a() { cat $HOME/.config/i3/config_home | sed -e 's/bindsym\ //' | sed -e 's/\$
 alias xr="xrdb ~/.Xresources"
 
 # Proton VPN
-# opções: login, c(connect), s(status), d(disconnect)
+# opções: login, c(connect), s(status), d(disconnect), logout
 alias vpn="protonvpn-cli"
 
 function pomo() {
