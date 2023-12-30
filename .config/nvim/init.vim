@@ -60,8 +60,8 @@ nnoremap <C-Left> :vertical resize +3<CR>
 nnoremap <C-Right> :vertical resize -3<CR>
 
 " Easy way to get back to normal mode from home row
-inoremap kj <Esc>
-inoremap jk <Esc>
+inoremap kk <Esc>
+inoremap jj <Esc>
 
 " Automatically close brackets, parethesis, and quotes
 inoremap ' ''<left>
@@ -71,4 +71,6 @@ inoremap [ []<left>
 inoremap { {}<left>
 inoremap /* /**/<left><left>
 inoremap < <><left>
-inoremap !B ![]()<left><left><left><C-R>+<right><right><C-R>+<right><CR><CR>
+inoremap !! ![]()<left><left><left><C-R>+<right><right><C-R>+<right><CR><CR>
+inoremap ** ****<left><left>
+inoremap -[ - [ ] 
