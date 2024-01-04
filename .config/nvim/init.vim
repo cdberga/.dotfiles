@@ -16,6 +16,9 @@ set shiftwidth=2
 set softtabstop=2
 set expandtab
 
+set path+=**
+set wildmenu
+
 " Fzf
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <C-g> :GFiles<CR>
@@ -74,3 +77,13 @@ inoremap < <><left>
 inoremap !! ![]()<left><left><left><C-R>+<right><right><C-R>+<right><CR><CR>
 inoremap ** ****<left><left>
 inoremap -[ - [ ] 
+
+" Automatically surround with symbols
+vnoremap <Leader>s" di"<ESC>pa"
+vnoremap <Leader>s' di'<ESC>pa'
+vnoremap <Leader>s[ di[<ESC>pa]
+vnoremap <Leader>s** di**<ESC>pa**
+vnoremap <Leader>s{ di{<ESC>pa}
+vnoremap <Leader>s( di(<ESC>pa)
+vnoremap <Leader>s< di<<ESC>pa>
+
