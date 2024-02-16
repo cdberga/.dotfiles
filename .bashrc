@@ -131,14 +131,19 @@ alias rmm="shred -n 2 -z -u -v"
 alias fbash="cat ~/.bashrc | grep"
 alias ebash="nvim $HOME/.bashrc"
 alias fj="firejail --list"
-alias abre='xdg-open "`fzf`"'
-alias ab='xdg-open "`fzf`"'
+abre() {
+  xdg-open "`fzf`" | return
+}
+
+alias ab=abre
 
 function ph() {
-    docname=$1
-    if [ $docname ]; then
-        pandoc $docname.md -o $docname.html
-    fi
+  docname=$1
+  if [ $docname ]; then
+    pandoc $docname.md -o $docname.html
+  else
+    echo "Nenhum arquivo md foi passado."
+  fi
 }
 
 #alias vboxup='vboxmanage modifymedium disk $1 --resize $2'
@@ -149,11 +154,11 @@ alias n="nvim"
 alias nf="nvim \"\`fzf\`\""
 
 function vboxup() {
-    disk=$1
-    dsize=$2
-    if [[ $disk && $dsize ]]; then
-	vboxmanage modifymedium disk "$disk" --resize $dsize
-    fi
+  disk=$1
+  dsize=$2
+  if [[ $disk && $dsize ]]; then
+    vboxmanage modifymedium disk "$disk" --resize $dsize
+  fi
 }
 
 alias pdf="zathura"

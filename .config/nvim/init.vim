@@ -86,4 +86,5 @@ vnoremap <Leader>s** di**<ESC>pa**
 vnoremap <Leader>s{ di{<ESC>pa}
 vnoremap <Leader>s( di(<ESC>pa)
 vnoremap <Leader>s< di<<ESC>pa>
-
+vnoremap <Leader><down> :sort<CR>
+vnoremap <Leader><up> :sort!<CR>
