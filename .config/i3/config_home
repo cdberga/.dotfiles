@@ -158,6 +158,15 @@ bindsym $mod+f exec "firejail firefox"
 
 bindsym $mod+F1 exec "notify-send `firejail --list`"
 
+# Add bookmark
+bindsym $mod+Ctrl+b exec "$HOME/work/scripts/bookmarks.sh add"
+
+# Launch bookmark
+bindsym $mod+Ctrl+o exec "$HOME/work/scripts/bookmarks.sh open"
+
+# Delete bookmark
+bindsym $mod+Ctrl+d exec "$HOME/work/scripts/bookmarks.sh delete"
+
 # Edit bashrc file
 bindsym $mod+Shift+b exec "xterm -e mcedit $HOME/.bashrc
 # Edit i3 config file
