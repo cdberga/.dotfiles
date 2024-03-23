@@ -53,14 +53,19 @@ bindsym $mod+x focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
+bindsym $mod+h focus left
 bindsym $mod+Down focus down
+bindsym $mod+j focus down
 bindsym $mod+Up focus up
+bindsym $mod+k focus up
 bindsym $mod+Right focus right
+bindsym $mod+l focus right
 
 # move focused window
-#bindsym $mod+Shift+j move left
-#bindsym $mod+Shift+k move down
-#bindsym $mod+Shift+l move up
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
 #bindsym $mod+Shift+ccedilla move right
 
 # alternatively, you can use the cursor keys:
@@ -134,7 +139,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 # Text Editor
 bindsym $mod+w exec "xed"
 # keepass
-bindsym $mod+k exec "keepass"
+#bindsym $mod+k exec "keepass"
 # Authy + Keepass
 bindsym $mod+F10 exec "keepass | authy"
 # Calculator (Gnome)
@@ -149,7 +154,7 @@ bindsym $mod+Ctrl+l exec "$HOME/DevEnv/SQLiteStudio/sqlitestudio"
 ## bindsym $mod+p exec "$HOME/DevEnv/Postman/Postman"
 bindsym $mod+b exec "firejail brave-browser"
 # Lock Screen
-bindsym $mod+l exec "i3lock"
+bindsym $mod++ccedilla exec "i3lock"
 bindsym $mod+Ctrl+x exec "/sbin/shutdown now"
 # Restart
 bindsym $mod+Ctrl+z exec "/sbin/shutdown -r now"
