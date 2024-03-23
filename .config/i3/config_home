@@ -34,7 +34,7 @@ floating_modifier $mod
 bindsym $mod+Return exec xterm
 bindsym $mod+Ctrl+t exec i3-sensible-terminal
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec dmenu_run -i -l 20
 ### End Read for Desktop Image ###
 
 # kill focused window
