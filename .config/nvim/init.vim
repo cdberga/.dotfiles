@@ -88,3 +88,6 @@ vnoremap <Leader>s( di(<ESC>pa)
 vnoremap <Leader>s< di<<ESC>pa>
 vnoremap <Leader><down> :sort<CR>
 vnoremap <Leader><up> :sort!<CR>
+
+nnoremap <c-j> :m .+1<CR>==
+nnoremap <c-k> :m .-2<CR>==
