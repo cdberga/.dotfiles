@@ -18,14 +18,7 @@ set expandtab
 
 set path+=**
 set wildmenu
-
-" Vimgrep and quickfix list
-nnoremap <F3> :vimgrep /<C-R><C-W>/ **/*.java <cr>
-nnoremap <F4> :vimgrep /<C-R><C-W>/g % <cr>
-nnoremap <F5> :vimgrep /<C-R><C-W>/ **/*.
-nnoremap <Leader>l :copen<CR>
-nnoremap <Leader>n :cnext<CR>
-nnoremap <Leader>p :cprev<CR>
+let mapleader = " "
 
 " Fzf
 nnoremap <silent> <C-p> :Files<CR>
@@ -38,9 +31,16 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " Keys
-let mapleader = " "
 nnoremap <Leader>w :write<CR>
 nnoremap <Leader>e :25Lex<CR>
+
+" Vimgrep and quickfix list
+nnoremap <Leader>l :cw<CR>
+nnoremap <Leader>] :cn<CR>
+nnoremap <Leader>[ :cp<CR>
+nnoremap <F3> :vimgrep /<C-R><C-W>/ **/*.java <cr>
+nnoremap <F4> :vimgrep /<C-R><C-W>/g % <cr>
+nnoremap <F5> :vimgrep /<C-R><C-W>/ **/*.
 
 " Reload config
 nnoremap <Leader>r :source ~/.config/nvim/init.vim<CR>
