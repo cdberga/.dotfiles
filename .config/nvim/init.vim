@@ -23,8 +23,6 @@ let mapleader = " "
 " Fzf
 nnoremap <silent> <C-p> :Files<CR>
 nnoremap <silent> <C-g> :GFiles<CR>
-nnoremap <silent> <C-o> :Buffers<CR>
-nnoremap <C-f> :Rg! 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
@@ -35,9 +33,10 @@ nnoremap <Leader>w :write<CR>
 nnoremap <Leader>e :25Lex<CR>
 
 " Vimgrep and quickfix list
-nnoremap <Leader>l :cw<CR>
-nnoremap <Leader>] :cn<CR>
-nnoremap <Leader>[ :cp<CR>
+nnoremap <Leader>l :copen<CR>
+nnoremap <Leader>] :cnext<CR>
+nnoremap <Leader>[ :cprev<CR>
+nnoremap <Leader>c :cclose<CR>
 nnoremap <F3> :vimgrep /<C-R><C-W>/ **/*.java <cr>
 nnoremap <F4> :vimgrep /<C-R><C-W>/g % <cr>
 nnoremap <F5> :vimgrep /<C-R><C-W>/ **/*.
@@ -46,10 +45,10 @@ nnoremap <F5> :vimgrep /<C-R><C-W>/ **/*.
 nnoremap <Leader>r :source ~/.config/nvim/init.vim<CR>
 
 " Tab bindings 
-nnoremap <Leader>t    :tabnew<CR>
-nnoremap <Leader>x    :tabclose<CR>
-nnoremap <Leader>j    :tabprevious<CR>
-nnoremap <Leader>k    :tabnext<CR>
+" nnoremap <Leader>t    :tabnew<CR>
+" nnoremap <Leader>x    :tabclose<CR>
+" nnoremap <Leader>j    :tabprevious<CR>
+" nnoremap <Leader>k    :tabnext<CR>
 
 " easy split generation
 nnoremap <Leader>v    :vsplit
@@ -62,9 +61,10 @@ nnoremap <C-j>    <C-w>j
 nnoremap <C-k>    <C-w>k
 
 " buffer navigation
-nnoremap <Tab>    :bnext <CR>
-nnoremap <S-Tab>    :bprevious <CR>
-nnoremap <Leader>d    :bd! <CR>
+nnoremap <Leader>b :b 
+nnoremap <Tab>     :bnext <CR>
+nnoremap <S-Tab>   :bprevious <CR>
+nnoremap <Leader>d :bd! <CR>
 
 " adjust split sizes easier
 nnoremap <C-Left> :vertical resize +3<CR>
