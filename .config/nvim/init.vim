@@ -1,7 +1,10 @@
+" data path = ~/.local
 call plug#begin(stdpath('data') . '/plugged')
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'artur-shaik/vim-javacomplete2'
+Plug 'airblade/vim-rooter'
 
 call plug#end()
 
@@ -19,6 +22,33 @@ set expandtab
 set path+=**
 set wildmenu
 let mapleader = " "
+
+
+" vim-javacomplete2 mappings
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+nmap <leader>jI <Plug>(JavaComplete-Imports-AddMissing)
+nmap <leader>jR <Plug>(JavaComplete-Imports-RemoveUnused)
+nmap <leader>ji <Plug>(JavaComplete-Imports-AddSmart)
+nmap <leader>jii <Plug>(JavaComplete-Imports-Add)
+imap <silent> <C-space> <C-x><C-O>
+
+" Vim rooter
+" All files
+" let g:rooter_targets = '*'
+
+" Directories and everything under /home
+" let g:rooter_targets = ['/', '/home/*']
+let g:rooter_patterns = ['=src']
+
+" YAML files
+let g:rooter_targets = '*.yml,*.yaml'
+
+" Directories and YAML files
+let g:rooter_targets = '/,*.yml,*.yaml'
+
+" To exclude a pattern, prefix it with !
+let g:rooter_patterns = ['!.git/worktrees', '!=extras', '!^fixtures', '!build/env.sh']
 
 " Fzf
 nnoremap <silent> <C-p> :Files<CR>
@@ -55,10 +85,10 @@ nnoremap <Leader>v    :vsplit
 nnoremap <Leader>s    :split
 
 " easy split navigation
-nnoremap <C-h>    <C-w>h
-nnoremap <C-l>    <C-w>l
-nnoremap <C-j>    <C-w>j
-nnoremap <C-k>    <C-w>k
+" nnoremap <C-h>    <C-w>h
+" nnoremap <C-l>    <C-w>l
+" nnoremap <C-j>    <C-w>j
+" nnoremap <C-k>    <C-w>k
 
 " buffer navigation
 nnoremap <Leader>b :b 
