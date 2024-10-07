@@ -27,10 +27,9 @@ let mapleader = " "
 " vim-javacomplete2 mappings
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
-nmap <leader>jI <Plug>(JavaComplete-Imports-AddMissing)
-nmap <leader>jR <Plug>(JavaComplete-Imports-RemoveUnused)
-nmap <leader>ji <Plug>(JavaComplete-Imports-AddSmart)
-nmap <leader>jii <Plug>(JavaComplete-Imports-Add)
+nmap <F6> <Plug>(JavaComplete-Imports-Add) <Plug>(JavaComplete-Imports-AddMissing) <Plug>(JavaComplete-Imports-RemoveUnused) <Plug>(JavaComplete-Imports-AddSmart)
+imap <F6> <Plug>(JavaComplete-Imports-Add) <Plug>(JavaComplete-Imports-AddMissing) <Plug>(JavaComplete-Imports-RemoveUnused) <Plug>(JavaComplete-Imports-AddSmart)
+
 imap <silent> <C-space> <C-x><C-O>
 
 " Vim rooter
