@@ -14,6 +14,9 @@ set scrolloff=4
 set smartcase smartindent ignorecase
 
 " Set the behavior of tab
+filetype indent on
+autocmd FileType java setlocal expandtab tabstop=4 sw=4 sts=4
+
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
