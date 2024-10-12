@@ -119,15 +119,25 @@ inoremap ** ****<left><left>
 inoremap -[ - [ ] 
 
 " Automatically surround with symbols
-vnoremap <Leader>s" di"<ESC>pa"
-vnoremap <Leader>s' di'<ESC>pa'
-vnoremap <Leader>s[ di[<ESC>pa]
-vnoremap <Leader>s** di**<ESC>pa**
-vnoremap <Leader>s{ di{<ESC>pa}
-vnoremap <Leader>s( di(<ESC>pa)
-vnoremap <Leader>s< di<<ESC>pa>
-vnoremap <Leader><down> :sort<CR>
-vnoremap <Leader><up> :sort!<CR>
+nnoremap <Leader>s" viwdi"<ESC>pa"<ESC>
+nnoremap <Leader>s' viwdi'<ESC>pa'<ESC>
+nnoremap <Leader>s[ viwdi[<ESC>pa]<ESC>
+nnoremap <Leader>s** viwdi**<ESC>pa**<ESC>
+nnoremap <Leader>s{ viwdi{<ESC>pa}<ESC>
+nnoremap <Leader>s( viwdi(<ESC>pa)<ESC>
+nnoremap <Leader>s< viwdi<<ESC>pa><ESC>
+nnoremap <Leader><down> :sort<CR><ESC>
+nnoremap <Leader><up> :sort!<CR><ESC>
+
+vnoremap <Leader>s" di"<ESC>pa"<ESC>
+vnoremap <Leader>s' di'<ESC>pa'<ESC>
+vnoremap <Leader>s[ di[<ESC>pa]<ESC>
+vnoremap <Leader>s** di **<ESC>pa**<ESC>
+vnoremap <Leader>s{ di{<ESC>pa}<ESC>
+vnoremap <Leader>s( di(<ESC>pa)<ESC>
+vnoremap <Leader>s< di <<ESC>pa><ESC>
+vnoremap <Leader><down> :sort<CR><ESC>
+vnoremap <Leader><up> :sort!<CR><ESC>
 
 nnoremap <c-j> :m .+1<CR>==
 nnoremap <c-k> :m .-2<CR>==
