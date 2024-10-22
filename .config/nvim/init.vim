@@ -9,6 +9,9 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 call plug#end()
 
+" Set colorscheme
+colorscheme desert
+
 " Show line numbers
 set number relativenumber 
 set scrolloff=4
@@ -17,6 +20,8 @@ set smartcase smartindent ignorecase
 " Set the behavior of tab
 filetype indent on
 autocmd FileType java setlocal expandtab tabstop=4 sw=4 sts=4
+autocmd BufNewFile,BufRead *.go setlocal expandtab tabstop=4 shiftwidth=4 sts=4
+let g:go_fmt_autosave = 0
 
 set tabstop=2
 set shiftwidth=2

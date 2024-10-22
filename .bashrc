@@ -152,6 +152,7 @@ alias drv="lsblk"
 alias tm="tmux"
 alias n="nvim"
 alias nf="nvim \"\`fzf\`\""
+alias ng="nvim \"\`git ls-files | fzf\`\""
 
 function vboxup() {
   disk=$1
