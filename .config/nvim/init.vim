@@ -75,9 +75,10 @@ nnoremap <Leader>l :copen<CR>
 nnoremap <Leader>] :cnext<CR>
 nnoremap <Leader>[ :cprev<CR>
 nnoremap <Leader>c :cclose<CR>
-nnoremap <F3> :vimgrep /<C-R><C-W>/ **/*.java <cr>
+" Search the entire project for text under cursor 
+nnoremap <F3> :vimgrep /<C-R><C-W>/ **/*.%:e <cr>
+" Search in current file for text under cursor
 nnoremap <F4> :vimgrep /<C-R><C-W>/g % <cr>
-nnoremap <F5> :vimgrep /<C-R><C-W>/ **/*.
 
 " Reload config
 nnoremap <Leader>r :source ~/.config/nvim/init.vim<CR>
@@ -111,6 +112,13 @@ nnoremap <C-Right> :vertical resize -3<CR>
 " Easy way to get back to normal mode from home row
 inoremap kk <Esc>
 inoremap jj <Esc>
+
+" Shortcuts For coding
+"
+" Go testing func argument
+inoremap ttt t *testing.T
+" Java system console output
+inoremap cwl Console.writeln("")<left><left>
 
 " Automatically close brackets, parethesis, and quotes
 inoremap ' ''<left>
