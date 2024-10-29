@@ -117,13 +117,14 @@ alias chk="git checkout"
 alias gbr="git branch"
 alias bra="git branch"
 alias cfg='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias gitc='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias mci="mvn clean install"
 alias msr="mvn spring-boot:run"
 alias mte="mvn test"
 alias procs="ps -ef"
 alias proc="ps -ef | grep"
 alias i3w="cd $HOME/.config/i3"
-alias i3c="nvim $HOME/.config/i3/config_home"
+alias i3c="nvim $HOME/.config/i3/config"
 alias updi3="$HOME/.config/i3/scripts/update_config.sh"
 alias start="npm run start"
 alias tests="npm run test"
@@ -153,6 +154,7 @@ alias tm="tmux"
 alias n="nvim"
 alias nf="nvim \"\`fzf\`\""
 alias ng="nvim \"\`git ls-files | fzf\`\""
+alias ngc="nvim \"\`gitc ls-files | fzf\`\""
 
 function vboxup() {
   disk=$1
