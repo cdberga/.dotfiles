@@ -118,7 +118,7 @@ inoremap jj <Esc>
 " Go testing func argument
 inoremap ttt t *testing.T
 " Java system console output
-inoremap cwl Console.writeln("")<left><left>
+inoremap cwl Console.writeln("");<left><left><left>
 
 " Automatically close brackets, parethesis, and quotes
 inoremap ' ''<left>
