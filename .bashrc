@@ -97,12 +97,17 @@ alias la='ls -A'
 alias l='ls -CF'
 alias lt='ls -lt'
 alias ..="cd .."
+alias .2="cd ../.."
+alias .3="cd ../../.."
+alias .4="cd ../../../.."
+alias .5="cd ../../../../.."
 alias c="cd"
 
 # Commands
 alias open=xdg-open
 alias searchpr="ps -ef | grep"
 alias his="history | grep"
+alias glog="git log --graph --decorate"
 alias stat="git status"
 alias add="git add"
 alias gco="git commit -m"

@@ -119,6 +119,7 @@ inoremap jj <Esc>
 inoremap ttt t *testing.T
 " Java system console output
 inoremap cwl Console.writeln("");<left><left><left>
+inoremap sop System.out.println("");<left><left><left>
 
 " Automatically close brackets, parethesis, and quotes
 inoremap ' ''<left>
