@@ -69,6 +69,7 @@ noremap <Right> <NOP>
 " Keys
 nnoremap <Leader>w :write<CR>
 nnoremap <Leader>e :25Lex<CR>
+nnoremap :Q :q
 
 " Vimgrep and quickfix list
 nnoremap <Leader>l :copen<CR>
