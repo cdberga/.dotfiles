@@ -70,6 +70,9 @@ noremap <Right> <NOP>
 nnoremap <Leader>w :write<CR>
 nnoremap <Leader>e :25Lex<CR>
 nnoremap :Q :q
+nnoremap ; :
+nnoremap ç $
+vnoremap ç $<left>
 
 " Vimgrep and quickfix list
 nnoremap <Leader>l :copen<CR>
@@ -80,6 +83,9 @@ nnoremap <Leader>c :cclose<CR>
 nnoremap <F3> :vimgrep /<C-R><C-W>/ **/*.%:e <cr>
 " Search in current file for text under cursor
 nnoremap <F4> :vimgrep /<C-R><C-W>/g % <cr>
+
+" Search and Replace text under cursor with confirmation
+nnoremap <F5> :%s /<C-R><C-W>//gc<left><left><left>
 
 " Reload config
 nnoremap <Leader>r :source ~/.config/nvim/init.vim<CR>
@@ -117,10 +123,10 @@ inoremap jj <Esc>
 " Shortcuts For coding
 "
 " Go testing func argument
-inoremap ttt t *testing.T
+autocmd FileType go inoremap ttt t *testing.T
 " Java system console output
-inoremap cwl Console.writeln("");<left><left><left>
-inoremap sop System.out.println("");<left><left><left>
+autocmd FileType java inoremap cwl Console.writeln("");<left><left><left>
+autocmd FileType java inoremap sop System.out.println("");<left><left><left>
 
 " Automatically close brackets, parethesis, and quotes
 inoremap ' ''<left>
