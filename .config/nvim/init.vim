@@ -79,6 +79,8 @@ nnoremap <Leader>l :copen<CR>
 nnoremap <Leader>] :cnext<CR>
 nnoremap <Leader>[ :cprev<CR>
 nnoremap <Leader>c :cclose<CR>
+" Search the entire project for text to be written
+nnoremap <F2> :vimgrep // **/*.%:e<left><left><left><left><left><left><left><left><left><left>
 " Search the entire project for text under cursor 
 nnoremap <F3> :vimgrep /<C-R><C-W>/ **/*.%:e <cr>
 " Search in current file for text under cursor
