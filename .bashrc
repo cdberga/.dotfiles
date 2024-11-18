@@ -161,6 +161,7 @@ alias n="nvim"
 alias nf="nvim \"\`fzf --preview=\"nvim {}\"\`\""
 alias ng="nvim \"\`git ls-files | fzf --preview=\"nvim {}\"\`\""
 alias ngc="nvim \"\`gitc ls-files | fzf --preview=\"nvim {}\"\`\""
+alias evim="nvim ~/.config/nvim/init.vim"
 
 function vboxup() {
   disk=$1

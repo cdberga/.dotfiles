@@ -12,7 +12,7 @@ call plug#end()
 " Set colorscheme
 colorscheme desert
 hi Pmenu ctermbg=gray
-hi PmenuSel ctermbg=white
+hi PmenuSel ctermbg=yellow
 
 " Show line numbers
 set number relativenumber 
@@ -29,6 +29,7 @@ set tabstop=2
 set shiftwidth=2
 set softtabstop=2
 set expandtab
+set completeopt=longest,menu
 
 set path+=**
 set wildmenu
