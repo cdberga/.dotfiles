@@ -11,6 +11,8 @@ call plug#end()
 
 " Set colorscheme
 colorscheme desert
+hi Pmenu ctermbg=gray
+hi PmenuSel ctermbg=white
 
 " Show line numbers
 set number relativenumber 
@@ -121,6 +123,8 @@ nnoremap <C-Right> :vertical resize -3<CR>
 " Easy way to get back to normal mode from home row
 inoremap kk <Esc>
 inoremap jj <Esc>
+inoremap kj <Esc>
+inoremap jk <Esc>
 
 " Shortcuts For coding
 "

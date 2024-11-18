@@ -158,9 +158,9 @@ alias updbx="source ~/.bashrc"
 alias drv="lsblk"
 alias tm="tmux"
 alias n="nvim"
-alias nf="nvim \"\`fzf\`\""
-alias ng="nvim \"\`git ls-files | fzf\`\""
-alias ngc="nvim \"\`gitc ls-files | fzf\`\""
+alias nf="nvim \"\`fzf --preview=\"nvim {}\"\`\""
+alias ng="nvim \"\`git ls-files | fzf --preview=\"nvim {}\"\`\""
+alias ngc="nvim \"\`gitc ls-files | fzf --preview=\"nvim {}\"\`\""
 
 function vboxup() {
   disk=$1

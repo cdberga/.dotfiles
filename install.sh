@@ -43,25 +43,21 @@ i3_install="N"
 echo "Install i3 window manager[y/N]? "
 read i3_install
 if [ "$packcmd" != "pkg install" ] && [[ "$i3_install" =~ [yY] ]]; then
-  checkInstall "i3" "i3lock" "i3status" "i3blocks slim xorg"
+  checkInstall "i3" "i3lock" "i3status" "i3blocks xorg"
   checkInstall "numlockx" "feh" "flameshot" "ffmpeg" "slop"
 else
   echo "Don't install i3 window manager and utilities."
 fi
-# install mc
-checkInstall "mc"
-# install ripgrep
-checkInstall "ripgrep"
-# install neovim
-checkInstall "neovim"
+# install mc, ripgrep, neovim and tmux
+checkInstall "mc ripgrep neovim tmux"
 # install vimplug
 checkVimplug
-
-# install vim plugins
-nvim -c 'PlugInstall'
 
 # set bash configs and hide untracked files
 source $HOME/.bashrc
 cfg config --local status.showUntrackedFiles no
 
 # Set config to .gitconfig
+
+# install vim plugins
+nvim -c 'PlugInstall'

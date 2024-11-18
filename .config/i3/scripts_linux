@@ -71,3 +71,7 @@ Rules updated
 sudo apt remove xdg-desktop-portal
 sudo apt remove xdg-desktop-portal-gnome
 ```
+#### Converter imagem do virtualbox para qemu (virt-manager)
+```
+sudo qemu-img convert -O qcow2 ~/VirtualBox\ VMs/umin-cef/umin-cef-disk1.vdi /var/lib/libvirt/images/cef.qcow2
+```
