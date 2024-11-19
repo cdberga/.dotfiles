@@ -49,15 +49,15 @@ else
   echo "Don't install i3 window manager and utilities."
 fi
 # install mc, ripgrep, neovim and tmux
-checkInstall "mc ripgrep neovim tmux"
+checkInstall "mc ripgrep neovim tmux fzf"
 # install vimplug
 checkVimplug
 
 # set bash configs and hide untracked files
 source $HOME/.bashrc
-cfg config --local status.showUntrackedFiles no
+/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
 
 # Set config to .gitconfig
 
 # install vim plugins
-nvim -c 'PlugInstall'
+nvim -c 'PlugInstall' -c ":q" -c ":q";

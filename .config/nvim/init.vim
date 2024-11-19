@@ -43,6 +43,7 @@ nmap <F6> <Plug>(JavaComplete-Imports-Add) <Plug>(JavaComplete-Imports-AddMissin
 imap <F6> <Plug>(JavaComplete-Imports-Add) <Plug>(JavaComplete-Imports-AddMissing) <Plug>(JavaComplete-Imports-RemoveUnused) <Plug>(JavaComplete-Imports-AddSmart)
 
 imap <silent> <C-space> <C-x><C-O>
+autocmd FileType java,go imap <silent> . .<C-x><C-O>
 
 " Vim rooter
 " All files
@@ -134,6 +135,8 @@ autocmd FileType go inoremap ttt t *testing.T
 " Java system console output
 autocmd FileType java inoremap cwl Console.writeln("");<left><left><left>
 autocmd FileType java inoremap sop System.out.println("");<left><left><left>
+autocmd FileType java inoremap forc for( : <C-r>") {}<esc>^wa
+autocmd FileType java inoremap fori for(int i=0; i < <C-r>".size(); i++) {<cr><cr>}<esc>kS
 
 " Automatically close brackets, parethesis, and quotes
 inoremap ' ''<left>
