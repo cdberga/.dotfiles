@@ -138,23 +138,17 @@ bindsym $mod+Shift+0 move container to workspace 10
 ### Init Read for Desktop Image ###
 # Text Editor
 bindsym $mod+w exec "xed"
-# keepass
-#bindsym $mod+k exec "keepass"
-# Authy + Keepass
-bindsym $mod+F10 exec "keepass | authy"
 # Calculator (Gnome)
 bindsym $mod+c exec gnome-calculator
-# File Manager
-#bindsym $mod+t exec "thunar"
+# Chrome
 bindsym $mod+g exec "google-chrome"
-# IntelliJ
-bindsym $mod+i exec "ij"
 # SQLite
 bindsym $mod+Ctrl+l exec "$HOME/DevEnv/SQLiteStudio/sqlitestudio"
-## bindsym $mod+p exec "$HOME/DevEnv/Postman/Postman"
+# Brave
 bindsym $mod+b exec "firejail brave-browser"
 # Lock Screen
 bindsym $mod++ccedilla exec "i3lock"
+# Shutdown
 bindsym $mod+Ctrl+x exec "/sbin/shutdown now"
 # Restart
 bindsym $mod+Ctrl+z exec "/sbin/shutdown -r now"
@@ -174,17 +168,15 @@ bindsym $mod+Ctrl+d exec "$HOME/work/scripts/bookmarks.sh delete"
 
 # IR Rendavar 
 bindsym $mod+Ctrl+i exec "$HOME/work/scripts/ir-rendavar.sh"
-# bindsym $mod+Ctrl+i exec "notify-send `echo $USER`" 
 
 # Edit bashrc file
 bindsym $mod+Shift+b exec "xterm -e mcedit $HOME/.bashrc
 # Edit i3 config file
-bindsym $mod+Shift+i exec "xterm -e mcedit $HOME/.config/i3/config_home"
+bindsym $mod+Shift+i exec "xterm -e nvim $HOME/.config/i3/config"
 # Open scripts project folder in xterm
 #bindsym $mod+s exec "xterm -cd $HOME/work/scripts"
 
-# Spring Tool
-bindsym $mod+Ctrl+s exec "$HOME/DevEnv/sts-4.11.0.RELEASE/SpringToolSuite4"
+# Flameshot
 bindsym Print exec "flameshot gui"
 # Gif Record
 bindsym Ctrl+Print exec "$HOME/work/scripts/record-screen.sh"
@@ -194,8 +186,6 @@ bindsym Ctrl+Shift+Print exec "killall ffmpeg"
 bindsym $mod+Ctrl+k exec "pkill -KILL -u $USER"
 # user change
 bindsym $mod+Shift+u exec "dm-tool switch-to-greeter"
-# open Oracle Virtualbox
-bindsym $mod+Ctrl+m exec "virtualbox"
 # Libreoffice
 bindsym $mod+o exec "libreoffice"
 # Authy
@@ -214,6 +204,8 @@ bindsym $mod+Shift+p exec "$HOME/work/scripts/passmenu.sh -m d -f site"
 bindsym $mod+p exec "$HOME/work/scripts/passmenu.sh -m d -f pwd"
 # Totp with dmenu
 bindsym $mod+t exec "$HOME/work/scripts/totp.sh -tm"
+# Profit
+bindsym Ctrl+p exec "env WINEPREFIX='/home/tiwork/.wine' wine-stable C:\\\\users\\\\tiwork\\\\Application\\ Data\\\\Nelogica\\\\Profit\\\\profitchart.exe"
 
 ### End Read for Desktop Image ###
 
@@ -224,12 +216,14 @@ bindsym $mod+Ctrl+F11 exec blueberry
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioRaiseVolume exec "amixer -c 0 -q set Master 2dB+"
 bindsym XF86AudioLowerVolume exec "amixer -c 0 -q set Master 2dB-"
-bindsym $mod+Ctrl+v exec "/usr/share/code/code
 
 ### Work with VMs
 bindsym $mod+Ctrl+Shift+f exec "vboxmanage startvm umin-f2"
-bindsym $mod+Ctrl+Shift+p exec "vboxmanage startvm umin-priv"
 bindsym $mod+Ctrl+Shift+c exec "vboxmanage startvm umin-cef"
+# open Oracle Virtualbox
+bindsym $mod+Ctrl+m exec "virtualbox"
+# open virt-manager
+bindsym $mod+Ctrl+v exec "virt-manager"
 
 ### Init Read for Desktop Image ###
 # config file reload
