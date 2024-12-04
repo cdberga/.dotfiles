@@ -63,7 +63,7 @@ let g:rooter_targets = '/,*.yml,*.yaml'
 let g:rooter_patterns = ['!.git/worktrees', '!=extras', '!^fixtures', '!build/env.sh']
 
 " Fzf
-nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-a> :Files<CR>
 nnoremap <silent> <C-g> :GFiles<CR>
 noremap <Up> <NOP>
 noremap <Down> <NOP>
@@ -71,12 +71,15 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " Keys
-nnoremap <Leader>w :write<CR>
+nnoremap <Leader>w :up<CR>
 nnoremap <Leader>e :25Lex<CR>
 nnoremap :Q :q
 nnoremap ; :
+vnoremap ; :
 nnoremap ç $
 vnoremap ç $<left>
+nmap ,p "0p
+nmap ,P "0P
 
 " Vimgrep and quickfix list
 nnoremap <Leader>l :copen<CR>
@@ -84,14 +87,15 @@ nnoremap <Leader>] :cnext<CR>
 nnoremap <Leader>[ :cprev<CR>
 nnoremap <Leader>c :cclose<CR>
 " Search the entire project for text to be written
-nnoremap <F2> :vimgrep // **/*.%:e<left><left><left><left><left><left><left><left><left><left>
+nnoremap <F9>w :vimgrep // **/*.%:e<left><left><left><left><left><left><left><left><left><left>
 " Search the entire project for text under cursor 
-nnoremap <F3> :vimgrep /<C-R><C-W>/ **/*.%:e <cr>
+nnoremap <F9>s :vimgrep /<C-R><C-W>/ **/*.%:e <cr>
+" Search and Replace text under cursor with text to be written with confirmation
+nnoremap <F10>r :%s /<C-R><C-W>//gc<left><left><left>
+" Search in current file for text to be written
+nnoremap <F10>w :vimgrep //g %<left><left><left><left>
 " Search in current file for text under cursor
-nnoremap <F4> :vimgrep /<C-R><C-W>/g % <cr>
-
-" Search and Replace text under cursor with confirmation
-nnoremap <F5> :%s /<C-R><C-W>//gc<left><left><left>
+nnoremap <F10>s :vimgrep /<C-R><C-W>/g % <cr>
 
 " Reload config
 nnoremap <Leader>r :source ~/.config/nvim/init.vim<CR>
@@ -113,7 +117,7 @@ nnoremap <Leader>s    :split
 " nnoremap <C-k>    <C-w>k
 
 " buffer navigation
-nnoremap <Leader>b :b 
+nnoremap <Leader><tab> :b 
 nnoremap <Tab>     :bnext <CR>
 nnoremap <S-Tab>   :bprevious <CR>
 nnoremap <Leader>d :bd! <CR>
@@ -138,7 +142,7 @@ autocmd FileType java inoremap sop System.out.println("");<left><left><left>
 autocmd FileType java inoremap forc for( : <C-r>") {}<esc>^wa
 autocmd FileType java inoremap fori for(int i=0; i < <C-r>".size(); i++) {<cr><cr>}<esc>kS
 
-" Automatically close brackets, parethesis, and quotes
+" Automatically close brackets, parenthesis, and quotes
 inoremap ' ''<left>
 inoremap " ""<left>
 inoremap ( ()<left>
@@ -151,23 +155,23 @@ inoremap ** ****<left><left>
 inoremap -[ - [ ] 
 
 " Automatically surround with symbols
-nnoremap <Leader>s" viwdi"<ESC>pa"<ESC>
-nnoremap <Leader>s' viwdi'<ESC>pa'<ESC>
+nnoremap <Leader>" viwdi"<ESC>pa"<ESC>
+nnoremap <Leader>' viwdi'<ESC>pa'<ESC>
 nnoremap <Leader>s[ viwdi[<ESC>pa]<ESC>
-nnoremap <Leader>s** viwdi**<ESC>pa**<ESC>
+nnoremap <Leader>** viwdi**<ESC>pa**<ESC>
 nnoremap <Leader>s{ viwdi{<ESC>pa}<ESC>
 nnoremap <Leader>s( viwdi(<ESC>pa)<ESC>
-nnoremap <Leader>s< viwdi<<ESC>pa><ESC>
+nnoremap <Leader>< viwdi<<ESC>pa><ESC>
 nnoremap <Leader><down> :sort<CR><ESC>
 nnoremap <Leader><up> :sort!<CR><ESC>
 
-vnoremap <Leader>s" di"<ESC>pa"<ESC>
-vnoremap <Leader>s' di'<ESC>pa'<ESC>
+vnoremap <Leader>" di"<ESC>pa"<ESC>
+vnoremap <Leader>' di'<ESC>pa'<ESC>
 vnoremap <Leader>s[ di[<ESC>pa]<ESC>
-vnoremap <Leader>s** di **<ESC>pa**<ESC>
+vnoremap <Leader>** di **<ESC>pa**<ESC>
 vnoremap <Leader>s{ di{<ESC>pa}<ESC>
 vnoremap <Leader>s( di(<ESC>pa)<ESC>
-vnoremap <Leader>s< di <<ESC>pa><ESC>
+vnoremap <Leader>< di <<ESC>pa><ESC>
 vnoremap <Leader><down> :sort<CR><ESC>
 vnoremap <Leader><up> :sort!<CR><ESC>
 
