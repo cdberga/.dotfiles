@@ -87,15 +87,15 @@ nnoremap <Leader>] :cnext<CR>
 nnoremap <Leader>[ :cprev<CR>
 nnoremap <Leader>c :cclose<CR>
 " Search the entire project for text to be written
-nnoremap <F9>w :vimgrep // **/*.%:e<left><left><left><left><left><left><left><left><left><left>
+nnoremap <F9>s :vimgrep // **/*.%:e<left><left><left><left><left><left><left><left><left><left>
 " Search the entire project for text under cursor 
-nnoremap <F9>s :vimgrep /<C-R><C-W>/ **/*.%:e <cr>
+nnoremap <F9>c :vimgrep /<C-R><C-W>/ **/*.%:e <cr>
 " Search and Replace text under cursor with text to be written with confirmation
 nnoremap <F10>r :%s /<C-R><C-W>//gc<left><left><left>
 " Search in current file for text to be written
-nnoremap <F10>w :vimgrep //g %<left><left><left><left>
+nnoremap <F10>s :vimgrep //g %<left><left><left><left>
 " Search in current file for text under cursor
-nnoremap <F10>s :vimgrep /<C-R><C-W>/g % <cr>
+nnoremap <F10>c :vimgrep /<C-R><C-W>/g % <cr>
 
 " Reload config
 nnoremap <Leader>r :source ~/.config/nvim/init.vim<CR>
