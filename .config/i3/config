@@ -220,6 +220,7 @@ bindsym XF86AudioLowerVolume exec "amixer -c 0 -q set Master 2dB-"
 ### Work with VMs
 bindsym $mod+Ctrl+Shift+f exec "vboxmanage startvm umin-f2"
 bindsym $mod+Ctrl+Shift+c exec "vboxmanage startvm umin-cef"
+bindsym $mod+Ctrl+Shift+p exec "$HOME/work/scripts/qemu-debian-start.sh"
 # open Oracle Virtualbox
 bindsym $mod+Ctrl+m exec "virtualbox"
 # open virt-manager
