@@ -9,7 +9,8 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod4
+set $win Mod4
+set $alt Mod1
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -26,155 +27,155 @@ font pango:monospace 8
 # X core fonts rendering does not support right-to-left and this being a bitmap
 # font, it doesn’t scale on retina/hidpi displays.
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+# Use Mouse+$win to drag floating windows to their wanted position
+floating_modifier $win
 
 ### Init Read for Desktop Image ###
 # start a terminal
-bindsym $mod+Return exec xterm
-bindsym $mod+Ctrl+t exec i3-sensible-terminal
+bindsym $win+Return exec xterm
+bindsym $win+Ctrl+t exec i3-sensible-terminal
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run -i -l 20
+bindsym $win+d exec dmenu_run -i -l 20
 ### End Read for Desktop Image ###
 
 # kill focused window
-bindsym $mod+q kill
+bindsym $win+q kill
 
 
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# bindsym $win+d exec --no-startup-id i3-dmenu-desktop
 
 # change focus
-bindsym $mod+z focus left
-bindsym $mod+x focus right
-#bindsym $mod+ccedilla focus right
+bindsym $win+z focus left
+bindsym $win+x focus right
+#bindsym $win+ccedilla focus right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+h focus left
-bindsym $mod+Down focus down
-bindsym $mod+j focus down
-bindsym $mod+Up focus up
-bindsym $mod+k focus up
-bindsym $mod+Right focus right
-bindsym $mod+l focus right
+bindsym $win+Left focus left
+bindsym $win+h focus left
+bindsym $win+Down focus down
+bindsym $win+j focus down
+bindsym $win+Up focus up
+bindsym $win+k focus up
+bindsym $win+Right focus right
+bindsym $win+l focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-#bindsym $mod+Shift+ccedilla move right
+bindsym $win+Shift+h move left
+bindsym $win+Shift+j move down
+bindsym $win+Shift+k move up
+bindsym $win+Shift+l move right
+#bindsym $win+Shift+ccedilla move right
 
 # alternatively, you can use the cursor keys:
-bindsym $mod+Shift+Left move left
-bindsym $mod+Shift+Down move down
-bindsym $mod+Shift+Up move up
-bindsym $mod+Shift+Right move right
+bindsym $win+Shift+Left move left
+bindsym $win+Shift+Down move down
+bindsym $win+Shift+Up move up
+bindsym $win+Shift+Right move right
 
 # Go to previous or next workspace
-bindsym $mod+Ctrl+Left workspace prev
-bindsym $mod+Ctrl+Right workspace next
+bindsym $win+Ctrl+Left workspace prev
+bindsym $win+Ctrl+Right workspace next
 
 # Move to previous or next workspace
-bindsym $mod+Ctrl+Shift+Left move container to workspace prev; workspace prev
-bindsym $mod+Ctrl+Shift+Right move container to workspace next; workspace next
+bindsym $win+Ctrl+Shift+Left move container to workspace prev; workspace prev
+bindsym $win+Ctrl+Shift+Right move container to workspace next; workspace next
 
 # split toggle
-bindsym $mod+Ctrl+semicolon split toggle
+bindsym $win+Ctrl+semicolon split toggle
 
 # split in horizontal orientation
-#bindsym $mod+h split h
+#bindsym $win+h split h
 # split in vertical orientation
-#bindsym $mod+v split v
+#bindsym $win+v split v
 
 # enter fullscreen mode for the focused container
-bindsym $mod+Ctrl+f fullscreen toggle
+bindsym $win+Ctrl+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+semicolon layout toggle
-#bindsym $mod+s layout stacking
-#bindsym $mod+Ctrl+w layout tabbed
-#bindsym $mod+e layout toggle split
+bindsym $win+semicolon layout toggle
+#bindsym $win+s layout stacking
+#bindsym $win+Ctrl+w layout tabbed
+#bindsym $win+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $win+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_tilling
+bindsym $win+space focus mode_tilling
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $win+a focus parent
 
 # focus the child container
-#bindsym $mod+d focus child
+#bindsym $win+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $win+1 workspace 1
+bindsym $win+2 workspace 2
+bindsym $win+3 workspace 3
+bindsym $win+4 workspace 4
+bindsym $win+5 workspace 5
+bindsym $win+6 workspace 6
+bindsym $win+7 workspace 7
+bindsym $win+8 workspace 8
+bindsym $win+9 workspace 9
+bindsym $win+0 workspace 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $win+Shift+1 move container to workspace 1
+bindsym $win+Shift+2 move container to workspace 2
+bindsym $win+Shift+3 move container to workspace 3
+bindsym $win+Shift+4 move container to workspace 4
+bindsym $win+Shift+5 move container to workspace 5
+bindsym $win+Shift+6 move container to workspace 6
+bindsym $win+Shift+7 move container to workspace 7
+bindsym $win+Shift+8 move container to workspace 8
+bindsym $win+Shift+9 move container to workspace 9
+bindsym $win+Shift+0 move container to workspace 10
 
 ### Init Read for Desktop Image ###
 # Text Editor
-bindsym $mod+w exec "xed"
+bindsym $win+w exec "xed"
 # Calculator (Gnome)
-bindsym $mod+c exec gnome-calculator
+bindsym $win+c exec gnome-calculator
 # Chrome
-bindsym $mod+g exec "google-chrome"
+bindsym $win+g exec "google-chrome"
 # SQLite
-bindsym $mod+Ctrl+l exec "$HOME/DevEnv/SQLiteStudio/sqlitestudio"
+bindsym $win+Ctrl+l exec "$HOME/DevEnv/SQLiteStudio/sqlitestudio"
 # Brave
-bindsym $mod+b exec "firejail brave-browser"
+bindsym $win+b exec "firejail brave-browser"
 # Lock Screen
-bindsym $mod++ccedilla exec "i3lock"
+bindsym $win++ccedilla exec "i3lock"
 # Shutdown
-bindsym $mod+Ctrl+x exec "/sbin/shutdown now"
+bindsym $win+Ctrl+x exec "/sbin/shutdown now"
 # Restart
-bindsym $mod+Ctrl+z exec "/sbin/shutdown -r now"
+bindsym $win+Ctrl+z exec "/sbin/shutdown -r now"
 
-bindsym $mod+f exec "firejail firefox"
+bindsym $win+f exec "firejail firefox"
 
-bindsym $mod+F1 exec "notify-send `firejail --list`"
+bindsym $win+F1 exec "notify-send `firejail --list`"
 
 # Add bookmark
-bindsym $mod+Ctrl+b exec "$HOME/work/scripts/bookmarks.sh add"
+bindsym $win+Ctrl+b exec "$HOME/work/scripts/bookmarks.sh add"
 
 # Launch bookmark
-bindsym $mod+Ctrl+o exec "$HOME/work/scripts/bookmarks.sh open"
+bindsym $win+Ctrl+o exec "$HOME/work/scripts/bookmarks.sh open"
 
 # Delete bookmark
-bindsym $mod+Ctrl+d exec "$HOME/work/scripts/bookmarks.sh delete"
+bindsym $win+Ctrl+d exec "$HOME/work/scripts/bookmarks.sh delete"
 
 # IR Rendavar 
-bindsym $mod+Ctrl+i exec "$HOME/work/scripts/ir-rendavar.sh"
+bindsym $win+Ctrl+i exec "$HOME/work/scripts/ir-rendavar.sh"
 
 # Edit bashrc file
-bindsym $mod+Shift+b exec "xterm -e mcedit $HOME/.bashrc
+bindsym $win+Shift+b exec "xterm -e mcedit $HOME/.bashrc
 # Edit i3 config file
-bindsym $mod+Shift+i exec "xterm -e nvim $HOME/.config/i3/config"
+bindsym $win+Shift+i exec "xterm -e nvim $HOME/.config/i3/config"
 # Open scripts project folder in xterm
-#bindsym $mod+s exec "xterm -cd $HOME/work/scripts"
+#bindsym $win+s exec "xterm -cd $HOME/work/scripts"
 
 # Flameshot
 bindsym Print exec "flameshot gui"
@@ -183,56 +184,56 @@ bindsym Ctrl+Print exec "$HOME/work/scripts/record-screen.sh"
 # Gif Recording Stop
 bindsym Ctrl+Shift+Print exec "killall ffmpeg"
 # user logout (Kill session)
-bindsym $mod+Ctrl+k exec "pkill -KILL -u $USER"
+bindsym $win+Ctrl+k exec "pkill -KILL -u $USER"
 # user change
-bindsym $mod+Shift+u exec "dm-tool switch-to-greeter"
+bindsym $win+Shift+u exec "dm-tool switch-to-greeter"
 # Libreoffice
-bindsym $mod+o exec "libreoffice"
+bindsym $win+o exec "libreoffice"
 # Authy
-bindsym $mod+Ctrl+a exec "authy"
+bindsym $win+Ctrl+a exec "authy"
 # McEdit clip to clipboard
-bindsym $mod+Shift+m exec "find ~/.local/share/mc/mcedit -name mcedit.clip | xclip -i -sel copy ~/.local/share/mc/mcedit/mcedit.clip &"
+bindsym $win+Shift+m exec "find ~/.local/share/mc/mcedit -name mcedit.clip | xclip -i -sel copy ~/.local/share/mc/mcedit/mcedit.clip &"
 # Open general menu
-bindsym $mod+m exec "$HOME/work/scripts/menus_new.sh -a $HOME/work/scripts/menus.cfg -t 'Menu: '"
+bindsym $win+m exec "$HOME/work/scripts/menus_new.sh -a $HOME/work/scripts/menus.cfg -t 'Menu: '"
 # Pass menu login
-bindsym $mod+Ctrl+p exec "$HOME/work/scripts/passmenu.sh -m d"
+bindsym $win+Ctrl+p exec "$HOME/work/scripts/passmenu.sh -m d"
 # Pass menu user
-bindsym $mod+u exec "$HOME/work/scripts/passmenu.sh -m d -f user"
+bindsym $win+u exec "$HOME/work/scripts/passmenu.sh -m d -f user"
 # Pass menu site
-bindsym $mod+Shift+p exec "$HOME/work/scripts/passmenu.sh -m d -f site"
+bindsym $win+Shift+p exec "$HOME/work/scripts/passmenu.sh -m d -f site"
 # Pass menu pwd
-bindsym $mod+p exec "$HOME/work/scripts/passmenu.sh -m d -f pwd"
+bindsym $win+p exec "$HOME/work/scripts/passmenu.sh -m d -f pwd"
 # Totp with dmenu
-bindsym $mod+t exec "$HOME/work/scripts/totp.sh -tm"
+bindsym $win+t exec "$HOME/work/scripts/totp.sh -tm"
 # Profit
-bindsym Ctrl+p exec "env WINEPREFIX='/home/tiwork/.wine' wine-stable C:\\\\users\\\\tiwork\\\\Application\\ Data\\\\Nelogica\\\\Profit\\\\profitchart.exe"
+bindsym $win+$alt+p exec "env WINEPREFIX='/home/tiwork/.wine' wine-stable C:\\\\users\\\\tiwork\\\\Application\\ Data\\\\Nelogica\\\\Profit\\\\profitchart.exe"
 
 ### End Read for Desktop Image ###
 
 # pavucontrol 4 sound
-bindsym $mod+Ctrl+F12 exec pavucontrol
+bindsym $win+Ctrl+F12 exec pavucontrol
 # Bluetooth Control
-bindsym $mod+Ctrl+F11 exec blueberry
+bindsym $win+Ctrl+F11 exec blueberry
 bindsym XF86AudioMute exec "amixer -D pulse set Master toggle"
 bindsym XF86AudioRaiseVolume exec "amixer -c 0 -q set Master 2dB+"
 bindsym XF86AudioLowerVolume exec "amixer -c 0 -q set Master 2dB-"
 
 ### Work with VMs
-bindsym $mod+Ctrl+Shift+f exec "vboxmanage startvm umin-f2"
-bindsym $mod+Ctrl+Shift+c exec "vboxmanage startvm umin-cef"
-bindsym $mod+Ctrl+Shift+p exec "$HOME/work/scripts/qemu-debian-start.sh"
+bindsym $win+Ctrl+Shift+f exec "vboxmanage startvm umin-f2"
+bindsym $win+Ctrl+Shift+c exec "vboxmanage startvm umin-cef"
+bindsym $win+Ctrl+Shift+p exec "$HOME/work/scripts/qemu-debian-start.sh"
 # open Oracle Virtualbox
-bindsym $mod+Ctrl+m exec "virtualbox"
+bindsym $win+Ctrl+m exec "virtualbox"
 # open virt-manager
-bindsym $mod+Ctrl+v exec "virt-manager"
+bindsym $win+Ctrl+v exec "virt-manager"
 
 ### Init Read for Desktop Image ###
 # config file reload
-bindsym $mod+Shift+c "reload"
+bindsym $win+Shift+c "reload"
 # i3 update and restart # inplace (preserves your layout/session, can be used to upgrade i3)
-#bindsym $mod+Shift+r "restart"
+#bindsym $win+Shift+r "restart"
 # i3 exit #(logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $win+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 ### End Read for Desktop Image ###
 
 # resize window (you can also use the mouse for that)
@@ -259,7 +260,7 @@ mode "resize" {
         bindsym Escape mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $win+r mode "resize"
 
 exec --no-startup-id nm-applet
 
