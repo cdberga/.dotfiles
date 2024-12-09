@@ -139,7 +139,13 @@ alias fbash="cat ~/.bashrc | grep"
 alias ebash="nvim $HOME/.bashrc"
 alias fj="firejail --list"
 abre() {
-  xdg-open "`fzf`" | return
+  arq=`fzf`
+  type=`file --mime-type --brief $arq`
+  if [[ $type =~ ^text/.* ]]; then
+    nvim "$arq"
+  else
+    xdg-open "$arq"
+  fi
 }
 
 alias ab=abre
