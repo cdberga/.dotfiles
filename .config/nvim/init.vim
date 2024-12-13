@@ -117,7 +117,7 @@ nnoremap <Leader>s    :split
 " nnoremap <C-k>    <C-w>k
 
 " buffer navigation
-nnoremap <Leader><tab> :b 
+nnoremap <Leader><tab> :Buffers<cr>
 nnoremap <Tab>     :bnext <CR>
 nnoremap <S-Tab>   :bprevious <CR>
 nnoremap <Leader>d :bd! <CR>

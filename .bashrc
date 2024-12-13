@@ -139,16 +139,24 @@ alias fbash="cat ~/.bashrc | grep"
 alias ebash="nvim $HOME/.bashrc"
 alias fj="firejail --list"
 abre() {
-  arq=`fzf`
+  depth=$1
+  arq=""
+  if [ $depth ]; then
+    arq=`find . -maxdepth 1 ! -iregex '^\.\/\.git\/.*' | fzf`
+  else
+    arq=`find . ! -iregex '^\.\/\.git\/.*' | fzf`
+  fi
+
   type=`file --mime-type --brief $arq`
   if [[ $type =~ ^text/.* ]]; then
-    nvim "$arq"
+    nvim "$arq" 2> /dev/null
   else
-    xdg-open "$arq"
+    xdg-open "$arq" 2> /dev/null
   fi
 }
 
-alias ab=abre
+alias ab="abre 1" 
+alias abr=abre
 
 function ph() {
   docname=$1
