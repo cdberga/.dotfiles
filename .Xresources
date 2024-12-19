@@ -1,3 +1,12 @@
-*.font: xft:monospace:size=10
+!*.font: xft:monospace:size=10
 XTerm*selectToClipboard: true
+XTerm*faceName: Consolas
+XTerm*faceSize: 10
 
+! Terminal Colors
+!XTerm*vt100.background:     #000000
+!XTerm*vt100.foreground:     #aa80FF
+!XTerm*cursorColor:          #aaaaaa
+XTerm*vt100.background:     #111111
+XTerm*vt100.foreground:     #aaFFFF
+XTerm*cursorColor:          #ffffff
