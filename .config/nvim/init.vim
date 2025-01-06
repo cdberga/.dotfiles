@@ -17,13 +17,14 @@ hi PmenuSel ctermbg=yellow
 " Show line numbers
 set number relativenumber 
 set scrolloff=4
-set smartcase smartindent ignorecase
+set smartcase smartindent ignorecase 
 
 " Set the behavior of tab
 filetype indent on
 autocmd FileType java setlocal expandtab tabstop=4 sw=4 sts=4
 autocmd BufNewFile,BufRead *.go setlocal expandtab tabstop=4 shiftwidth=4 sts=4
 let g:go_fmt_autosave = 0
+let g:go_code_completion_icase = 1
 
 set tabstop=2
 set shiftwidth=2
@@ -44,6 +45,9 @@ imap <F6> <Plug>(JavaComplete-Imports-Add) <Plug>(JavaComplete-Imports-AddMissin
 
 imap <silent> <C-space> <C-x><C-O>
 autocmd FileType java,go imap <silent> . .<C-x><C-O>
+autocmd FileType java,go inoremap <silent> " ""<left>
+autocmd FileType java,go inoremap <silent> ' ''<left>
+autocmd FileType sh,bash inoremap <silent> ` ``<left>
 
 " Vim rooter
 " All files
@@ -143,13 +147,10 @@ autocmd FileType java inoremap forc for( : <C-r>") {}<esc>^wa
 autocmd FileType java inoremap fori for(int i=0; i < <C-r>".size(); i++) {<cr><cr>}<esc>kS
 
 " Automatically close brackets, parenthesis, and quotes
-inoremap ' ''<left>
-inoremap " ""<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap /* /**/<left><left>
-inoremap < <><left>
 inoremap !! ![]()<left><left><left><C-R>+<right><right><C-R>+<right><CR><CR>
 inoremap ** ****<left><left>
 inoremap -[ - [ ] 
