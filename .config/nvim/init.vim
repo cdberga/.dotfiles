@@ -151,7 +151,7 @@ inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap /* /**/<left><left>
-inoremap !! ![]()<left><left><left><C-R>+<right><right><C-R>+<right><CR><CR>
+inoremap !! ![]()<left><left><left><c-r>+<right><right><c-r>+<right><cr><cr>
 inoremap ** ****<left><left>
 inoremap -[ - [ ] 
 
@@ -162,17 +162,21 @@ nnoremap <Leader>s[ viwdi[<ESC>pa]<ESC>
 nnoremap <Leader>** viwdi**<ESC>pa**<ESC>
 nnoremap <Leader>s{ viwdi{<ESC>pa}<ESC>
 nnoremap <Leader>s( viwdi(<ESC>pa)<ESC>
+nnoremap <Leader>s9 viwdi(<ESC>pa)<ESC>
 nnoremap <Leader>< viwdi<<ESC>pa><ESC>
+nnoremap <Leader>, viwdi<<ESC>pa><ESC>
 nnoremap <Leader><down> :sort<CR><ESC>
 nnoremap <Leader><up> :sort!<CR><ESC>
 
-vnoremap <Leader>" di"<ESC>pa"<ESC>
-vnoremap <Leader>' di'<ESC>pa'<ESC>
+vnoremap " di"<ESC>pa"<ESC>
+vnoremap ' di'<ESC>pa'<ESC>
 vnoremap <Leader>s[ di[<ESC>pa]<ESC>
-vnoremap <Leader>** di **<ESC>pa**<ESC>
+vnoremap ** di **<ESC>pa**<ESC>
 vnoremap <Leader>s{ di{<ESC>pa}<ESC>
 vnoremap <Leader>s( di(<ESC>pa)<ESC>
-vnoremap <Leader>< di <<ESC>pa><ESC>
+vnoremap <Leader>s9 di(<ESC>pa)<ESC>
+vnoremap < di <<ESC>pa><ESC>
+vnoremap , di <<ESC>pa><ESC>
 vnoremap <Leader><down> :sort<CR><ESC>
 vnoremap <Leader><up> :sort!<CR><ESC>
 
@@ -182,3 +186,6 @@ vnoremap <c-j> :m '>+1<CR>gv=gv
 vnoremap <c-k> :m '<-2<CR>gv=gv
 inoremap <c-j> <Esc>:m .+1<CR>==gi
 inoremap <c-k> <Esc>:m .-2<CR>==gi
+
+" Format columns
+vnoremap <leader>f :!column -t<cr> gv=
