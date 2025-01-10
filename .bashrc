@@ -2,6 +2,8 @@
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
+export PATH="$PATH:/opt/nvim-linux64/bin"
+
 export EDITOR='nvim'
 # If not running interactively, don't do anything
 case $- in
@@ -172,9 +174,9 @@ alias updbx="source ~/.bashrc"
 alias drv="lsblk"
 alias tm="tmux"
 alias n="nvim"
-alias nf="nvim \"\`fzf --preview=\"nvim {}\"\`\""
-alias ng="nvim \"\`git ls-files | fzf --preview=\"nvim {}\"\`\""
-alias ngc="nvim \"\`gitc ls-files | fzf --preview=\"nvim {}\"\`\""
+alias nf="nvim \"\`fzf \`\""
+alias ng="nvim \"\`git ls-files | fzf \`\""
+alias ngc="nvim \"\`gitc ls-files | fzf \`\""
 alias evim="nvim ~/.config/nvim/init.vim"
 
 function vboxup() {
