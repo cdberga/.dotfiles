@@ -7,6 +7,14 @@ Plug 'junegunn/fzf.vim'
 " Plug 'airblade/vim-rooter'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+Plug 'nvim-treesitter/nvim-treesitter' 
+Plug 'neovim/nvim-lspconfig' 
+Plug 'hrsh7th/cmp-nvim-lsp' 
+Plug 'hrsh7th/nvim-cmp' 
+Plug 'hrsh7th/cmp-buffer' 
+Plug 'L3MON4D3/LuaSnip' 
+Plug 'onsails/lspkind.nvim' 
+Plug 'mfussenegger/nvim-jdtls' 
 call plug#end()
 
 " Set colorscheme
@@ -38,7 +46,7 @@ let mapleader = " "
 
 
 " vim-javacomplete2 mappings
- autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " nmap <F6> <Plug>(JavaComplete-Imports-Add) <Plug>(JavaComplete-Imports-AddMissing) <Plug>(JavaComplete-Imports-RemoveUnused) <Plug>(JavaComplete-Imports-AddSmart)
 " imap <F6> <Plug>(JavaComplete-Imports-Add) <Plug>(JavaComplete-Imports-AddMissing) <Plug>(JavaComplete-Imports-RemoveUnused) <Plug>(JavaComplete-Imports-AddSmart)
