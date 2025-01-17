@@ -52,7 +52,7 @@ let mapleader = " "
 " imap <F6> <Plug>(JavaComplete-Imports-Add) <Plug>(JavaComplete-Imports-AddMissing) <Plug>(JavaComplete-Imports-RemoveUnused) <Plug>(JavaComplete-Imports-AddSmart)
 
 imap <silent> <C-space> <C-x><C-O>
-autocmd FileType java,go imap <silent> . .<C-x><C-O>
+autocmd FileType go imap <silent> . .<C-x><C-O>
 autocmd FileType java,go inoremap <silent> " ""<left>
 autocmd FileType java,go inoremap <silent> ' ''<left>
 autocmd FileType sh,bash inoremap <silent> ` ``<left>
@@ -76,6 +76,8 @@ nnoremap ; :
 vnoremap ; :
 nnoremap ç $
 vnoremap ç $<left>
+inoremap çç <esc>A
+inoremap Ç <esc>I
 nmap ,p "0p
 nmap ,P "0P
 
